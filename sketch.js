@@ -7,6 +7,10 @@ function setup()
     createCanvas(850,700);
     noStroke();
     
+    var amoColorR = random(0, 255);
+    var amoColorG = random(0, 255);
+    var amoColorB = random(0, 255);
+    
     amoeba = {
         
         points:[],
@@ -34,7 +38,7 @@ function setup()
         // part of amoeba OBJECT, independant non related to draw function   
         draw:function(eyeDirection)
         {
-            fill(0, 200, 0); // amoeba's colour
+            fill(amoColorR, amoColorG, amoColorB); // amoeba's colour
             
             beginShape();
             for(var i=0; i<this.points.length; i++)
